@@ -1,0 +1,122 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #7000ff;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 322px;
+  background: #ffffff0f;
+  gap: 76.94px;
+  @include respond(phone) {
+    display: none;
+  }
+
+  &__logo {
+    font-family: GT Walsheim Pro;
+    font-size: 18.04px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 69px;
+    margin-left: 19px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    margin: 0 auto;
+
+    .group__item--menu {
+      display: flex;
+      align-items: center;
+      gap: 25.42px;
+
+      img {
+        max-width: 100%;
+      }
+
+      .group__item--item {
+        font-family: GT Walsheim Pro;
+        font-size: 20.62px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.icon_menu {
+  display: none;
+
+  @include respond(phone) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    img {
+      display: block;
+    }
+  }
+}
+
+.header__mobile {
+  display: block;
+
+  @include respond(phone) {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #6b00ff;
+    padding: 20px;
+
+    .header__section--logo {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .header__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .group__item--menu {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+.header__section {
+  flex-grow: 1;
+}
+
+.header__section--settings {
+  margin-top: auto;
+  padding-bottom: 20px;
+}

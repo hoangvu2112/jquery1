@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #7000ff;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 322px;
+  background: rgba(255, 255, 255, 0.0588235294);
+  gap: 76.94px;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    display: none;
+  }
+}
+.header__logo {
+  font-family: GT Walsheim Pro;
+  font-size: 18.04px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 69px;
+  margin-left: 19px;
+}
+.header__section {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  margin: 0 auto;
+}
+.header__section .group__item--menu {
+  display: flex;
+  align-items: center;
+  gap: 25.42px;
+}
+.header__section .group__item--menu img {
+  max-width: 100%;
+}
+.header__section .group__item--menu .group__item--item {
+  font-family: GT Walsheim Pro;
+  font-size: 20.62px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.icon_menu {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .icon_menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+  }
+  .icon_menu img {
+    display: block;
+  }
+}
+
+.header__mobile {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .header__mobile {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #6b00ff;
+    padding: 20px;
+  }
+  .header__mobile .header__section--logo {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .header__mobile .header__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__mobile .header__section .group__item--menu {
+    margin: 20px 0;
+  }
+}
+
+.header__section {
+  flex-grow: 1;
+}
+
+.header__section--settings {
+  margin-top: auto;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=styles.css.map */
